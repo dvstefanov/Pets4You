@@ -1,9 +1,11 @@
-const express = require('express');
-
-const router = express.Router();
+const router = require('express').Router();
 
 router.get('/', (req, res) => {
-    res.render('home/home');
+	res.render('home/home');
+});
+
+router.get('/contacts', (req, res) => {
+    res.render('home/contacts');
 });
 
 module.exports = router;
