@@ -10,7 +10,7 @@ const app = express();
 
 
 // template engine setup
-app.set('views', 'src/views');
+app.set('views', './src/views');
 app.set('layout', './layouts/main');
 app.set('view engine', 'ejs');
 

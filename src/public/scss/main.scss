@@ -1,0 +1,28 @@
+@import '_variables.scss';
+// rubik sans-serif
+* {
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	margin: 0;
+	display: flex;
+	flex: {
+		direction: column;
+	}
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#navigation-wrapper {
+	background-color: map-get($map: $navigation, $key: background);
+    color: map-get($map: $navigation, $key: color);
+}
+
+footer {
+	margin-top: auto;
+}
