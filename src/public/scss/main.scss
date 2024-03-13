@@ -1,5 +1,6 @@
 @import '_variables.scss';
-// rubik sans-serif
+@import 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap';
+
 * {
 	box-sizing: border-box;
 }
@@ -7,6 +8,8 @@
 body {
 	min-height: 100vh;
 	margin: 0;
+    font-family: 'Montserrat', 'Helvetica', sans-serif;
+    font-weight: map-get($map: $font-power, $key: regular);
 	display: flex;
 	flex: {
 		direction: column;
@@ -16,6 +19,12 @@ body {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 #navigation-wrapper {
