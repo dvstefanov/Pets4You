@@ -34,4 +34,6 @@ ul {
 
 footer {
 	margin-top: auto;
+    background-color: map-get($map: $navigation, $key: background);
+    color: map-get($map: $navigation, $key: color);
 }
