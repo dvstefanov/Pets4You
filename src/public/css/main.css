@@ -23,13 +23,13 @@ ul {
   padding: 0;
 }
 
-#navigation-wrapper {
+footer {
+  margin-top: auto;
   background-color: #231f20;
   color: red;
 }
 
-footer {
-  margin-top: auto;
+#navigation-wrapper {
   background-color: #231f20;
   color: red;
 }

@@ -1,0 +1,6 @@
+@import '_variables.scss';
+
+#navigation-wrapper {
+	background-color: map-get($map: $navigation, $key: background);
+    color: map-get($map: $navigation, $key: color);
+}
