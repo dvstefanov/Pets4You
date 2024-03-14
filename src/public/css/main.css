@@ -26,12 +26,38 @@ ul {
 footer {
   margin-top: auto;
   background-color: #231f20;
-  color: red;
+  color: white;
 }
 
 #navigation-wrapper {
   background-color: #231f20;
-  color: red;
+  color: white;
+  height: 4rem;
+}
+#navigation-wrapper .main-navigation {
+  display: none;
+}
+#navigation-wrapper .navigation {
+  max-width: 1020px;
+  margin: 0 auto;
+  height: 100%;
+  font-size: 1.3rem;
+}
+@media (min-width: 600px) {
+  #navigation-wrapper .mobile-navigation {
+    display: none;
+  }
+  #navigation-wrapper .main-navigation {
+    display: flex;
+    align-items: center;
+  }
+  #navigation-wrapper .main-navigation .link {
+    padding: 0.4rem 0.5rem;
+    border-radius: 8px;
+  }
+  #navigation-wrapper .main-navigation .link:hover {
+    background-color: red;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
