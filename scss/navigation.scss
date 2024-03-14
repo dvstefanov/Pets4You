@@ -1,38 +1,63 @@
 @import '_variables.scss';
 
 #navigation-wrapper {
-    .main-navigation {
-        display: none;
-    }
+	.main-navigation {
+		display: none;
+	}
 
-    .navigation {
-        max-width: 1020px;
-        margin: 0 auto;
-        height: 100%;
-        font-size: $size-default * 1.3;
-    }
+	.navigation {
+		max-width: $max-width;
+		margin: 0 auto;
+		height: 100%;
+		font-size: $size-default * 1.3;
+	}
 
-    background-color: map-get($map: $navigation, $key: background);
-    color: map-get($map: $navigation, $key: color);
-    height: 4rem;
+	background-color: map-get($map: $navigation, $key: background);
+	color: map-get($map: $navigation, $key: color);
+	height: $size-default * 4;
 
-    @media (min-width: 600px) {
-        .mobile-navigation {
-            display: none;
-        }
+	@media (min-width: 600px) {
+		.mobile-navigation {
+			display: none;
+		}
 
-        .main-navigation {
-            display: flex;
-            align-items: center;
+		.main-navigation {
+			display: flex;
+			align-items: center;
 
-            .link {
-                padding: 0.4rem 0.5rem;
-                border-radius: $border-radius;
-            }
+			.link {
+				padding: 0.4rem 0.6rem;
+				border-radius: $border-radius;
 
+				@media (hover: hover) {
+					&:hover {
+						background-color: map-get($map: $navigation, $key: hover);
+					}
+				}
+			}
+		}
+	}
+}
+
+#footer-wrapper {
+	margin-top: auto;
+	background-color: map-get($map: $navigation, $key: background);
+	color: map-get($map: $navigation, $key: color);
+	height: $size-default * 3;
+
+	.footer-list {
+		max-width: $max-width;
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: $size-default;
+		height: 100%;
+
+		@media (hover: hover) {
             .link:hover {
-                background-color: map-get($map: $navigation, $key: hover);
+                color: red;
             }
         }
-    }
+	}
 }
