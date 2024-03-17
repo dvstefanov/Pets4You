@@ -5,6 +5,7 @@
 
 body {
   min-height: 100vh;
+  position: relative;
   margin: 0;
   font-family: "Montserrat", "Helvetica", sans-serif;
   font-weight: 400;
@@ -27,6 +28,7 @@ ul {
   background-color: #231f20;
   color: white;
   height: 4rem;
+  z-index: 5;
 }
 #navigation-wrapper .main-navigation-wrapper {
   display: none;
@@ -55,20 +57,28 @@ ul {
 #navigation-wrapper .mobile-navigation-wrapper #hamburger-menu.active .bar {
   background-color: red;
 }
+#navigation-wrapper .mobile-navigation-wrapper #hamburger-menu.active .bar:nth-child(2) {
+  opacity: 0;
+}
+#navigation-wrapper .mobile-navigation-wrapper #hamburger-menu.active .bar:first-child {
+  transform: translateY(11px) rotate(45deg);
+}
+#navigation-wrapper .mobile-navigation-wrapper #hamburger-menu.active .bar:last-child {
+  transform: translateY(-11px) rotate(-45deg);
+}
 #navigation-wrapper .mobile-navigation-wrapper #mobile-list {
   opacity: 0;
   margin-top: 4rem;
   pointer-events: none;
   position: absolute;
-  top: 0;
+  top: -1px;
   left: 0;
   background-color: #231f20;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  padding: 1rem;
+  gap: 1rem;
+  padding: 1rem 1rem 3rem 1rem;
   width: 100%;
-  min-height: 10rem;
 }
 @media (min-width: 600px) {
   #navigation-wrapper .mobile-navigation-wrapper {
@@ -116,6 +126,17 @@ ul {
   #footer-wrapper .footer-list .link:hover {
     color: red;
   }
+}
+
+#backdrop {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 100vw;
+  height: 100vh;
+  z-index: 4;
 }
 
 /*# sourceMappingURL=main.css.map */
