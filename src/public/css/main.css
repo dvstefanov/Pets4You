@@ -28,30 +28,71 @@ ul {
   color: white;
   height: 4rem;
 }
-#navigation-wrapper .main-navigation {
+#navigation-wrapper .main-navigation-wrapper {
   display: none;
+  padding: 0 1rem;
 }
-#navigation-wrapper .navigation {
-  max-width: 1020px;
-  margin: 0 auto;
+#navigation-wrapper .mobile-navigation-wrapper {
+  padding: 0 1rem;
+  position: relative;
+  display: flex;
+  align-items: center;
   height: 100%;
-  font-size: 1.3rem;
+}
+#navigation-wrapper .mobile-navigation-wrapper #hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 35px;
+  cursor: pointer;
+}
+#navigation-wrapper .mobile-navigation-wrapper #hamburger-menu .bar {
+  width: 100%;
+  height: 3px;
+  border-radius: 8px;
+  background-color: white;
+}
+#navigation-wrapper .mobile-navigation-wrapper #hamburger-menu.active .bar {
+  background-color: red;
+}
+#navigation-wrapper .mobile-navigation-wrapper #mobile-list {
+  opacity: 0;
+  margin-top: 4rem;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #231f20;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  width: 100%;
+  min-height: 10rem;
 }
 @media (min-width: 600px) {
-  #navigation-wrapper .mobile-navigation {
+  #navigation-wrapper .mobile-navigation-wrapper {
     display: none;
   }
-  #navigation-wrapper .main-navigation {
+  #navigation-wrapper .main-navigation-wrapper {
+    display: block;
+    height: 100%;
+    max-width: 1020px;
+    margin: 0 auto;
+  }
+  #navigation-wrapper .main-navigation-wrapper #main-list {
     display: flex;
+    gap: 0.5rem;
+    height: 100%;
     align-items: center;
   }
-  #navigation-wrapper .main-navigation .link {
-    padding: 0.4rem 0.6rem;
+  #navigation-wrapper .main-navigation-wrapper #main-list .link {
+    padding: 0.6rem;
     border-radius: 8px;
   }
 }
 @media (min-width: 600px) and (hover: hover) {
-  #navigation-wrapper .main-navigation .link:hover {
+  #navigation-wrapper .main-navigation-wrapper #main-list .link:hover {
     background-color: rgba(255, 255, 255, 0.22);
   }
 }
