@@ -1,0 +1,22 @@
+#footer-wrapper {
+	margin-top: auto;
+	background-color: map-get($map: $navigation, $key: background);
+	color: map-get($map: $navigation, $key: color);
+	height: $size-default * 3;
+
+	.footer-list {
+		max-width: $max-width;
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: $size-default;
+		height: 100%;
+
+		@media (hover: hover) {
+            .link:hover {
+                color: red;
+            }
+        }
+	}
+}
