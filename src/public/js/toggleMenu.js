@@ -6,11 +6,10 @@ menu.addEventListener('click', () => {
     menu.classList.toggle('active');
 
     if (menu.classList.contains('active')) {
-        menuLinks.style.opacity = '1';
-        menuLinks.style.pointerEvents = 'all';
+        menuLinks.style.left = '0';
         backdrop.style.display = 'block';
     } else {
-        menuLinks.style.opacity = '0';
+        menuLinks.style.left = '-100%';
         backdrop.style.display = 'none';
     }
 });
@@ -19,9 +18,8 @@ backdrop.addEventListener('click', () => {
     backdrop.style.display = 'none';
 
     if (menu.classList.contains('active')) {
-        menuLinks.style.opacity = '0';
-        menuLinks.style.pointerEvents = 'none';
         menu.classList.remove('active');
+        menuLinks.style.left = '-100%';
     }
     
 });
