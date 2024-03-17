@@ -55,7 +55,7 @@ ul {
   background-color: white;
 }
 #navigation-wrapper .mobile-navigation-wrapper #hamburger-menu.active .bar {
-  background-color: red;
+  transition: all 0.2s ease-out;
 }
 #navigation-wrapper .mobile-navigation-wrapper #hamburger-menu.active .bar:nth-child(2) {
   opacity: 0;
@@ -79,6 +79,7 @@ ul {
   gap: 1rem;
   padding: 1rem 1rem 3rem 1rem;
   width: 100%;
+  transition: all 0.3s ease-in-out;
 }
 @media (min-width: 600px) {
   #navigation-wrapper .mobile-navigation-wrapper {
